@@ -16,6 +16,8 @@ print(x)
 
 y = sm.expand(sm.sqrt((2*a + 3*b)**2))
 
+print(y)
+
 y = y.evalf(subs = {a**2: 32, b**2: 9, a*b: ((4*sm.sqrt(2)*3*sm.cos(sm.pi/4)))})
 
 print(y)

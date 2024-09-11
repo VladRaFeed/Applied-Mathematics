@@ -18,7 +18,7 @@ def MatrixMethod(mtrx1, mtrx2):
     ress = np.linalg.solve(mtrx1, mtrx2)
     print(ress)
 
-# MatrixMethod(A, B)
+MatrixMethod(A, B)
 
 ## за формулами Крамера
 
@@ -40,4 +40,4 @@ def CramersFormuls(mtrx1, mtrx2):
     print(x2)
     print(x3)
 
-# CramersFormuls(A, B)
+CramersFormuls(A, B)
