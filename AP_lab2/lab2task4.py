@@ -53,6 +53,7 @@ plt.axvline(0, color="red", linewidth=1, ls = "--")
 plt.legend()
 
 x_dot = fsolve(solve_functions, 1)
+print(x_dot)
 y_dot = solve_functions(x_dot[0])
 
 plt.scatter(x_dot[0], y_dot, marker=',', color="magenta", s=70, label="Точка перетину")
