@@ -16,8 +16,8 @@ colors2 = cm.Purples(np.linspace(0.1, 0.8, num_of_columns))
 colors3 = cm.Reds(np.linspace(0.1, 0.8, num_of_columns))
 
 ax.bar(np.arange(num_of_columns), height1, zs = 0, zdir='y', color=colors1)
-ax.bar(np.arange(num_of_columns), height2, zs = 2, zdir='y', color=colors2)
-ax.bar(np.arange(num_of_columns), height3, zs = 1, zdir='y', color=colors3)
+ax.bar(np.arange(num_of_columns), height2, zs = 1, zdir='y', color=colors2)
+ax.bar(np.arange(num_of_columns), height3, zs = 2, zdir='y', color=colors3)
 
 ax.set_xlabel("x")
 ax.set_ylabel("y")
