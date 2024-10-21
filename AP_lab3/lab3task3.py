@@ -13,7 +13,7 @@ z = (np.sin(np.sqrt(np.pow(x, 2) + np.pow(y, 2)))) / (np.sqrt(np.pow(x, 2) + np.
 fig=plt.figure(figsize=(10, 8))
 ax= fig.add_subplot(111, projection='3d')
 
-myFigure = ax.plot_surface(x, y, z, cmap=cm.Purples)
+myFigure = ax.plot_surface(x, y, z, cmap=cm.Purples, alpha=0.5)
 
 ax.set_zlim(-5, 5)
 ax.set_xlabel("x")
