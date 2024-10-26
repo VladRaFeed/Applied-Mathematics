@@ -22,7 +22,7 @@ for i in range(x.shape[0]):
         z_num = fsolve(f, initial_num, args=(x[i, j], y[i, j]))
         z[i, j] = z_num[0]
 
-ax.plot_surface(x, y, z, cmap='Blues', edgecolor='none')
+ax.plot_surface(x, y, z, cmap='Blues', edgecolor='none', alpha=0.3)
 ax.set_xlabel("x")
 ax.set_ylabel("y")
 ax.set_zlabel("z")
