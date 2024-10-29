@@ -2,12 +2,13 @@ import numpy as np
 import matplotlib.pyplot as plt
 from matplotlib.animation import FuncAnimation
 
-fig, ax = plt.subplots(figsize=(6,6))
+fig, ax = plt.subplots(figsize=(10,8))
 
-line, = ax.plot([], [], linewidth=2)
+line, = ax.plot([], [], linewidth=1.5)
+
 colors = ["tomato", "cyan", "magenta", "lime", "yellow", "skyblue", "purple"]
 
-def update(frame):
+def updateAnim(frame):
     t = np.linspace(-2, 2, 1000)
 
     x = np.exp(t) * np.cos(t)
@@ -21,7 +22,7 @@ def update(frame):
     line.set_color(colors[frame % len(colors)]) 
     return line,
 
-animation = FuncAnimation(fig, update, frames=60, interval=100)
+animation = FuncAnimation(fig, updateAnim, frames=60, interval=100)
 
 animation.save("lab4task1.gif", writer='pillow')
 ax.set_xlim(-3, 12)
