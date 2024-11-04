@@ -18,13 +18,18 @@ z = (np.sin(np.sqrt(np.pow(x, 2) + np.pow(y, 2)))) / (np.sqrt(np.pow(x, 2) + np.
 
 def updateAnim(frame):
     ax.clear()
-    
-    xFrame = x + frame * -0.1
-    yFrame = y + frame * -0.1
 
-    z = (np.sin(np.sqrt(np.pow(xFrame, 2) + np.pow(yFrame, 2)))) / (np.sqrt(np.pow(xFrame, 2) + np.pow(yFrame, 2)))
+    xFrame = x + (frame / 2)
+    yFrame = y + (frame / 2)
 
-    myFigure = ax.plot_surface(xFrame, yFrame, z, cmap=cm.Purples, alpha=0.8)
+    # if(frame <= 30): 
+    #     xFrame = x + (frame / 2)
+    # else:
+    #     yFrame = y + (frame / 2)
+
+    z = (np.sin(np.sqrt(np.pow(-xFrame, 2) + np.pow(yFrame, 2)))) / (np.sqrt(np.pow(xFrame, 2) + np.pow(yFrame, 2)))
+
+    myFigure = ax.plot_surface(xFrame, y, z, cmap=cm.Purples, alpha=0.8)
     ax.set_zlim(-5, 5)
     ax.set_xlabel("x")
     ax.set_ylabel("y")
