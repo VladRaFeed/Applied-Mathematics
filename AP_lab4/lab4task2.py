@@ -27,7 +27,7 @@ def updateAnim(frame):
     # else:
     #     yFrame = y + (frame / 2)
 
-    z = (np.sin(np.sqrt(np.pow(-xFrame, 2) + np.pow(yFrame, 2)))) / (np.sqrt(np.pow(xFrame, 2) + np.pow(yFrame, 2)))
+    z = (np.sin(np.sqrt(np.pow(xFrame, 2) + np.pow(yFrame, 2)))) / (np.sqrt(np.pow(xFrame, 2) + np.pow(yFrame, 2)))
 
     myFigure = ax.plot_surface(xFrame, y, z, cmap=cm.Purples, alpha=0.8)
     ax.set_zlim(-5, 5)
