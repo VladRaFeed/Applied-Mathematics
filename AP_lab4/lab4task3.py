@@ -16,9 +16,6 @@ def updateAnim(frame):
         t = np.linspace(0, 2 * np.pi, 100)
         f = 3 * np.sin(5 * t + (frame + 50))
 
-    # t = np.linspace(0, 2 * np.pi * (frame / 50 if frame < 50 else 1), 100)
-    # f = 3 * np.sin(4 * t + (frame - 50 if frame >= 50 else 0))  
-
     line, = ax.plot(t, f, color='red')
     ax.fill(t, f, color='green', alpha=0.5)
     return line,
@@ -26,4 +23,5 @@ def updateAnim(frame):
 animation = FuncAnimation(fig, updateAnim, frames=100, interval=100)
 
 animation.save("lab4task3.gif", writer='pillow')
+
 plt.show()
