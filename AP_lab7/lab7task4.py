@@ -15,7 +15,7 @@ y_vals = np.array([y(xi) for xi in x_vals])
 
 plt.figure(figsize=(8, 6))
 plt.plot(x_vals, y_vals, label=r'$y(x) = \frac{e^{2x} + e^{-2x}}{2}$', color='lightblue')
-plt.fill_between(x_vals, 0, y_vals, color='gray', alpha=0.5, label='Область під кривою')
+# plt.fill_between(x_vals, 0, y_vals, color='gray', alpha=0.5, label='Область під кривою')
 plt.title("Графік функції та довжина кривої")
 plt.xlabel("x")
 plt.ylabel("y")

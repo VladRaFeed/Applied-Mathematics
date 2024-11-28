@@ -17,7 +17,7 @@ y_values = np.log(1 - np.cos(t_values)) - np.log(np.sin(t_values))
 
 plt.figure(figsize=(8, 6))
 plt.plot(x_values, y_values, label="Параметрична крива", color="red")
-plt.fill_between(x_values, 0, y_values, color='lightblue', alpha=0.5, label='Область під кривою')
+# plt.fill_between(x_values, 0, y_values, color='lightblue', alpha=0.5, label='Область під кривою')
 plt.xlabel("x")
 plt.ylabel("y")
 plt.title("Графік параметричної кривої")
