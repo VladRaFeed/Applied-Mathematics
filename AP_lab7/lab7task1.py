@@ -7,9 +7,9 @@ firstCurve = lambda y: y**2 - 2*y - 2
 secondCurve = lambda y: -y 
 
 y = symbols('y')
-points = solve((y**2 - 2*y - 2) - (-y), y)
+points = solve(firstCurve(y) - secondCurve(y), y)
 y1, y2 = [float(pt) for pt in points]
-
+    
 area, _ = quad(lambda y: firstCurve(y) - secondCurve(y), y1, y2)
 
 print(f"Площа фігури: {area:.4f}")

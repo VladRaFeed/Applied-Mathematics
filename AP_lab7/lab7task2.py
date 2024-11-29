@@ -2,7 +2,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 from scipy.integrate import quad
 
-polarF = lambda phi: 2 - np.sin(phi)
+polarF = lambda phi: 2 + np.cos(2*phi)
 areaI = lambda phi: 0.5 * (polarF(phi))**2
 
 phi_min, phi_max = 0, 2 * np.pi

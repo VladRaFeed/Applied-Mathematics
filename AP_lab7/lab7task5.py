@@ -1,9 +1,19 @@
 import numpy as np
 from scipy.integrate import quad
 import matplotlib.pyplot as plt
+from sympy import symbols, sin, cos, log, diff, lambdify
 
-dx_dt = lambda t: (np.cos(t) / (1 + np.sin(t))) - (np.sin(t) / np.cos(t))
-dy_dt = lambda t: (-np.sin(t) / (1 - np.cos(t))) - (np.cos(t) / np.sin(t))
+t = symbols('t')
+
+x_expr = log(1 + sin(t)) - log(cos(t))
+y_expr = log(1 - cos(t)) - log(sin(t))
+
+dx_dt_expr = diff(x_expr, t)
+dy_dt_expr = diff(y_expr, t)
+
+dx_dt = lambdify(t, dx_dt_expr, 'numpy')
+dy_dt = lambdify(t, dy_dt_expr, 'numpy')
+
 arc_length = lambda t: np.sqrt(dx_dt(t)**2 + dy_dt(t)**2)
 
 t_min = np.pi / 6
